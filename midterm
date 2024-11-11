@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+        
+        body {
+            background-color: #0000FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            height: 700px;
+            background-color: #abcdef;
+            border-radius: 25px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #my-image {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: url('dog.jpg');
+            background-size: cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .intro-text {
+            margin-top: 360px;
+            font-size: 18px;
+            color: #000;
+        }
+
+        nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a button {
+            width: 100px;
+            height: 50px;
+            background-color: #123456;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover button {
+            background-color: #abcdef;
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+            
+            nav a button {
+                width: 80px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="my-image"></div>
+        <p class="intro-text">Hello! My name is Kree Zhu, a second-year computer science major with a passion for programming. I enjoy gaming, particularly Star Realms, and love exploring Arizona’s hiking trails. I'm dedicated to learning, collaborating, and making a positive impact in tech and game design.</p>
+        <nav>
+            <a href="#about"><button>About</button></a>
+            <a href="#projects"><button>Projects</button></a>
+            <a href="#contact"><button>Contact</button></a>
+        </nav>
+    </div>
+</body>
+</html>
