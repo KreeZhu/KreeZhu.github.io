@@ -19,7 +19,6 @@
         .container {
             position: relative;
             width: 800px;
-            height: auto;
             background-color: #abcdef;
             border-radius: 25px;
             padding: 20px;
@@ -28,14 +27,11 @@
         }
 
         #my-image {
-            position: absolute;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 300px;
-            width: 300px;
+            margin: 20px auto;
+            height: 200px;
+            width: 200px;
             border-radius: 50%;
-            background-image: url('images/dog.png');
+            background-image: url('dog.png');
             background-size: cover;
             animation: fadeIn 2s ease-in-out;
         }
@@ -46,14 +42,14 @@
         }
 
         .intro-text {
-            margin-top: 360px;
             font-size: 18px;
             color: #000;
+            margin: 20px 0;
         }
 
         /* Zelda game template section */
         .game-section {
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 20px;
             background-color: #234567;
             color: #ffffff;
@@ -61,9 +57,9 @@
         }
 
         .game-cover {
-            width: 250px;
-            height: 350px;
-            background-image: url('images/zelda.png');
+            width: 150px;
+            height: 225px;
+            background-image: url('zelda.png');
             background-size: cover;
             margin: 20px auto;
             border-radius: 10px;
@@ -84,7 +80,7 @@
         }
 
         .contact-section input, .contact-section button {
-            width: 80%;
+            width: 90%;
             padding: 10px;
             margin: 10px 0;
             border: none;
@@ -105,17 +101,15 @@
         }
 
         nav {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         nav a button {
             width: 100px;
-            height: 50px;
+            height: 40px;
             background-color: #123456;
             color: #fff;
             border: none;
@@ -135,13 +129,13 @@
                 padding: 15px;
             }
             
-            .intro-text {
+            .intro-text, .game-description {
                 font-size: 16px;
             }
             
             nav a button {
                 width: 80px;
-                height: 40px;
+                height: 35px;
             }
         }
     </style>
@@ -175,3 +169,4 @@
     </div>
 </body>
 </html>
+
