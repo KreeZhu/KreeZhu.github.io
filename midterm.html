@@ -31,6 +31,8 @@
             height: 200px;
             width: 200px;
             border-radius: 50%;
+            background-image: url('https://raw.githubusercontent.com/username/repository/branch/path/to/dog.png');
+            background-size: cover;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -57,7 +59,7 @@
         .game-cover {
             width: 150px;
             height: 225px;
-            background-image: url('https://raw.githubusercontent.com/your-username/your-repository/branch/images/zelda.png');
+            background-image: url('https://raw.githubusercontent.com/username/repository/branch/path/to/zelda.png');
             background-size: cover;
             margin: 20px auto;
             border-radius: 10px;
@@ -140,19 +142,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- Image Section -->
-        <img src="https://raw.githubusercontent.com/your-username/your-repository/branch/images/dog.png" alt="Picture of my dog" width="300">
-        
-        <!-- Introduction Text -->
+        <div id="my-image"></div>
         <p class="intro-text">Hello! My name is Kree Zhu, a second-year computer science major with a passion for programming. I enjoy gaming, particularly Star Realms, and love exploring Arizona’s hiking trails. I'm dedicated to learning, collaborating, and making a positive impact in tech and game design.</p>
         
-        <!-- Zelda Game Section -->
+        <!-- Zelda game template section -->
         <div class="game-section">
             <div class="game-cover"></div>
             <p class="game-description">*The Legend of Zelda: Tears of the Kingdom* is an epic action-adventure game where players journey through Hyrule and beyond to uncover ancient secrets and prevent the looming catastrophe. As the hero Link, players explore, battle, and solve puzzles in a beautiful, open-world experience.</p>
         </div>
 
-        <!-- Contact Section -->
+        <!-- Contact section -->
         <div class="contact-section">
             <h3>Contact Me</h3>
             <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
@@ -162,7 +161,6 @@
             </form>
         </div>
 
-        <!-- Navigation -->
         <nav>
             <a href="#about"><button>About</button></a>
             <a href="#projects"><button>Projects</button></a>
@@ -171,4 +169,5 @@
     </div>
 </body>
 </html>
+
 
