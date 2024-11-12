@@ -9,11 +9,36 @@
         body {
             background-color: #0000FF;
             display: flex;
-            align-items: center;
+            align-items: flex-start;  /* 将主体内容放置在顶部 */
             justify-content: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
             font-family: 'Roboto', sans-serif;
+            padding-top: 50px;  /* 增加顶部空间 */
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px; /* 按钮间距 */
+        }
+
+        nav a button {
+            width: 120px;
+            height: 45px;
+            background-color: #123456;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover button {
+            background-color: #abcdef;
+            color: #000;
         }
 
         .container {
@@ -24,6 +49,7 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
+            margin-top: 50px; /* 让内容区稍微下移，避免与按钮重叠 */
         }
 
         #my-image {
@@ -98,29 +124,6 @@
             color: #ffffff;
         }
 
-        nav {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        nav a button {
-            width: 100px;
-            height: 40px;
-            background-color: #123456;
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav a:hover button {
-            background-color: #abcdef;
-            color: #000;
-        }
-
         @media (max-width: 600px) {
             .container {
                 width: 90%;
@@ -132,13 +135,20 @@
             }
             
             nav a button {
-                width: 80px;
-                height: 35px;
+                width: 100px;
+                height: 40px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#about"><button>About</button></a>
+        <a href="#game"><button>Game</button></a>
+        <a href="#contact"><button>Contact</button></a>
+    </nav>
+
     <div class="container">
         <!-- Image Section -->
         <img src="dog.jpg" alt="Picture of my dog" width="300">
@@ -147,13 +157,13 @@
         <p class="intro-text">Hello! My name is Kree Zhu, a second-year computer science major with a passion for programming. I enjoy gaming, particularly Star Realms, and love exploring Arizona’s hiking trails. I'm dedicated to learning, collaborating, and making a positive impact in tech and game design.</p>
         
         <!-- Zelda Game Section -->
-        <div class="game-section">
+        <div class="game-section" id="game">
             <div class="game-cover"></div>
             <p class="game-description">*The Legend of Zelda: Tears of the Kingdom* is an epic action-adventure game where players journey through Hyrule and beyond to uncover ancient secrets and prevent the looming catastrophe. As the hero Link, players explore, battle, and solve puzzles in a beautiful, open-world experience.</p>
         </div>
 
         <!-- Contact Section -->
-        <div class="contact-section">
+        <div class="contact-section" id="contact">
             <h3>Contact Me</h3>
             <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -161,13 +171,6 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-
-        <!-- Navigation -->
-        <nav>
-            <a href="#about"><button>About</button></a>
-            <a href="#projects"><button>Projects</button></a>
-            <a href="#contact"><button>Contact</button></a>
-        </nav>
     </div>
 </body>
 </html>
