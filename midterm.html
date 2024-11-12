@@ -19,7 +19,7 @@
         .container {
             position: relative;
             width: 800px;
-            height: 700px;
+            height: auto;
             background-color: #abcdef;
             border-radius: 25px;
             padding: 20px;
@@ -35,7 +35,7 @@
             height: 300px;
             width: 300px;
             border-radius: 50%;
-            background-image: url('dog.jpg');
+            background-image: url('images/dog.png');
             background-size: cover;
             animation: fadeIn 2s ease-in-out;
         }
@@ -49,6 +49,59 @@
             margin-top: 360px;
             font-size: 18px;
             color: #000;
+        }
+
+        /* Zelda game template section */
+        .game-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #234567;
+            color: #ffffff;
+            border-radius: 15px;
+        }
+
+        .game-cover {
+            width: 250px;
+            height: 350px;
+            background-image: url('images/zelda.png');
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .game-description {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Contact section */
+        .contact-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #345678;
+            color: #ffffff;
+            border-radius: 15px;
+        }
+
+        .contact-section input, .contact-section button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-section button {
+            background-color: #abcdef;
+            color: #123456;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-section button:hover {
+            background-color: #234567;
+            color: #ffffff;
         }
 
         nav {
@@ -97,6 +150,23 @@
     <div class="container">
         <div id="my-image"></div>
         <p class="intro-text">Hello! My name is Kree Zhu, a second-year computer science major with a passion for programming. I enjoy gaming, particularly Star Realms, and love exploring Arizona’s hiking trails. I'm dedicated to learning, collaborating, and making a positive impact in tech and game design.</p>
+        
+        <!-- Zelda game template section -->
+        <div class="game-section">
+            <div class="game-cover"></div>
+            <p class="game-description">*The Legend of Zelda: Tears of the Kingdom* is an epic action-adventure game where players journey through Hyrule and beyond to uncover ancient secrets and prevent the looming catastrophe. As the hero Link, players explore, battle, and solve puzzles in a beautiful, open-world experience.</p>
+        </div>
+
+        <!-- Contact section -->
+        <div class="contact-section">
+            <h3>Contact Me</h3>
+            <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
         <nav>
             <a href="#about"><button>About</button></a>
             <a href="#projects"><button>Projects</button></a>
