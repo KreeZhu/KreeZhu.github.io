@@ -16,6 +16,13 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
             padding-top: 50px;  /* 增加顶部空间 */
+            animation: fadeInBody 1s ease-out; /* 页面渐显效果 */
+        }
+
+        /* 页面渐显效果 */
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         nav {
@@ -23,6 +30,12 @@
             gap: 15px;
             justify-content: center;
             margin-bottom: 30px; /* 按钮间距 */
+            animation: fadeInNav 1s ease-out; /* 导航栏渐显效果 */
+        }
+
+        @keyframes fadeInNav {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         nav a button {
@@ -33,12 +46,13 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
         }
 
         nav a:hover button {
             background-color: #abcdef;
             color: #000;
+            transform: scale(1.1); /* 鼠标悬停时按钮放大 */
         }
 
         .container {
@@ -50,6 +64,12 @@
             box-sizing: border-box;
             text-align: center;
             margin-top: 30px; /* 让内容区稍微下移，避免与按钮重叠 */
+            animation: slideIn 1s ease-out; /* 内容渐显和滑入效果 */
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         #my-image {
@@ -57,10 +77,10 @@
             height: 200px;
             width: 200px;
             border-radius: 50%;
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeInImage 2s ease-in-out; /* 图片淡入效果 */
         }
 
-        @keyframes fadeIn {
+        @keyframes fadeInImage {
             from { opacity: 0; }
             to { opacity: 1; }
         }
@@ -69,6 +89,12 @@
             font-size: 18px;
             color: #000;
             margin: 20px 0;
+            animation: fadeInText 2s ease-in-out; /* 文字渐显效果 */
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Zelda game template section */
@@ -78,6 +104,12 @@
             background-color: #234567;
             color: #ffffff;
             border-radius: 15px;
+            animation: fadeInGame 1.5s ease-in-out; /* 游戏区块渐显效果 */
+        }
+
+        @keyframes fadeInGame {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .game-cover {
@@ -101,6 +133,12 @@
             background-color: #345678;
             color: #ffffff;
             border-radius: 15px;
+            animation: fadeInContact 1.5s ease-in-out; /* 联系区块渐显效果 */
+        }
+
+        @keyframes fadeInContact {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .contact-section input, .contact-section button {
