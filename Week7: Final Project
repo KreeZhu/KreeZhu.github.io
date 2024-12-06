@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #444;
+    }
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #83a4d4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #668aac;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Personality Predictor</h1>
+    <p>Enter your birth details to discover your personality.</p>
+    <input type="number" id="day" placeholder="Day (1-31)">
+    <input type="number" id="month" placeholder="Month (1-12)">
+    <input type="number" id="year" placeholder="Year">
+    <button id="predict">Predict Personality</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('predict').addEventListener('click', () => {
+      const day = parseInt(document.getElementById('day').value);
+      const month = parseInt(document.getElementById('month').value);
+      const resultDiv = document.getElementById('result');
+
+      if (!day || !month || day < 1 || day > 31 || month < 1 || month > 12) {
+        resultDiv.innerText = "Please enter valid day and month!";
+        return;
+      }
+
+      const personality = getPersonality(month, day);
+      resultDiv.innerText = `Your personality: ${personality}`;
+    });
+
+    function getPersonality(month, day) {
+      const traits = [
+        "Creative and visionary",
+        "Practical and grounded",
+        "Passionate and determined",
+        "Logical and analytical",
+        "Empathetic and nurturing",
+        "Adventurous and spontaneous",
+        "Independent and inventive",
+        "Generous and idealistic",
+        "Disciplined and ambitious",
+        "Charming and sociable",
+        "Dynamic and ambitious",
+        "Sensitive and intuitive"
+      ];
+
+      const index = (month - 1 + (day % 2)) % traits.length;
+      return traits[index];
+    }
+  </script>
+</body>
+</html>
