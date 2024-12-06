@@ -45,6 +45,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       margin-top: 10px;
+      display: none; /* Initially hidden */
     }
     button:hover {
       background-color: #668aac;
@@ -106,14 +107,17 @@
       const day = parseInt(document.getElementById('day').value);
       const month = parseInt(document.getElementById('month').value);
       const resultDiv = document.getElementById('result');
+      const moreButton = document.getElementById('more');
 
       if (!day || !month || day < 1 || day > 31 || month < 1 || month > 12) {
         resultDiv.innerText = "Please enter valid day and month!";
+        moreButton.style.display = 'none'; // Hide "More" button
         return;
       }
 
       const personality = getPersonality(month, day);
       resultDiv.innerText = `Your personality: ${personality}`;
+      moreButton.style.display = 'inline-block'; // Show "More" button
     });
 
     document.getElementById('more').addEventListener('click', () => {
@@ -121,7 +125,9 @@
       const overlay = document.getElementById('overlay');
       const modalContent = document.getElementById('modal-content');
 
-      modalContent.innerText = "You are creative, detail-oriented, and have a natural curiosity for the world. Your personality reflects a balance of logic and empathy, making you adaptable in various situations.";
+      modalContent.innerText = `Your detailed personality traits:
+      - Positive: Creative and visionary.
+      - Negative: Sometimes overly idealistic and impractical.`;
       modal.style.display = 'block';
       overlay.style.display = 'block';
     });
